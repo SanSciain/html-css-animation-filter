@@ -1,43 +1,175 @@
+/* Esercizio 1 */
 .ex-1-square {
     width: 100px;
     height: 100px;
     border: 1px solid red;
+    transition: background-color 2s;
 }
+
+.ex-1-square:hover{
+    background-color: red;
+}
+
+
+/* Esercizio 2 */
 .ex-2-square {
     width: 100px;
     height: 100px;
     background: red;
+    transition: width 5s;
 }
+
+.ex-2-square:active{
+    width: 100%;
+}
+
+
+/* Esercizio 3 */
 .ex-3-square {
     width: 100px;
     height: 100px;
     background: red;
+    transition: all 2s;
 }
+
+
+.ex-3-square:hover{
+    border-radius: 50%;
+}
+
+
+
+/* Esercizio 4 */
 .ex-4-square {
     width: 100px;
     height: 100px;
     background: red;
+    animation: fading 5s;
+    animation-iteration-count: infinite;
 }
+
+
+
+@keyframes fading {
+    50%{
+        background-color: transparent;
+    }
+}
+
+
+/* Esercizio 5 */
 .ex-5-square {
     margin: 20px;
     width: 60px;
     height: 60px;
     background: red;
+    transition: all 4s;
 }
+
+.ex-5-square:hover{
+    width: 100px;
+    height: 100px;
+}
+
+.ex-5-square:active{
+    width: 10px;
+    height: 10px;
+}
+
+
+
+
+/* Esercizi 6, 7, 8 */
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
 }
 
+
+/* Esercizio 6 */
+.ex-6-img:hover{
+    filter: grayscale(1);
+}
+
+
+/* Esercizio 7, 8 */
+.ex-7-img, .ex-8-img{
+    transition: all 5s;
+}
+
+
+/* Esercizio 7 */
+.ex-7-img:hover{
+    filter: grayscale(1);
+}
+
+/* Esercizio 8 */
+.ex-8-img:hover{
+    filter: sepia(.8);
+    border-radius: 20px;
+}
+
+
+/* Esercizio 9 */
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: all 5s;
 }
+
+.ex-9-img:hover{
+    filter: sepia(.8);
+    border-radius: 20px;
+    width: 600px;
+}
+
+
+/* Esercizio 10 */
 .ex-10-icon {
     font-size: 60px;
+    animation: rotating 4s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-timing-function: linear;
 }
+
+@keyframes rotating {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Esercizio 11 */
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover{
+    animation: rotate 4s;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    75%{
+        transform: rotate(270deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+
+
+/* Esercizio 12, 13 */
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -66,4 +198,115 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+
+/* Esercizio 12 */
+.ex-12-button:hover .ex-12-top-white{
+    animation: move-top 2s linear;
+}
+
+.ex-12-button:hover .ex-12-bottom-white{
+    animation: move-bottom 2s linear;
+}
+
+@keyframes move-top {
+    0%{
+        left:10%;
+    }
+
+    50%{
+        left: calc(90% - 60px);
+    }
+
+    100%{
+        left:10%;
+    }
+}
+
+@keyframes move-bottom {
+    0%{
+        right:20%;
+    }
+
+    50%{
+        right: calc(80% - 30px);
+    }
+
+    100%{
+        right:20%;
+    }
+}
+
+
+/* Esercizio 13 */
+
+.ex-13-button:hover .ex-13-top-white{
+    animation: rotate-top 3s linear;
+}
+
+.ex-13-button:hover .ex-13-bottom-white{
+    animation: rotate-bottom 3s linear;
+}
+
+@keyframes rotate-top {
+    0%{
+        left:10%;
+        top:-10px;
+    }
+
+    20%{
+        left: calc(100% - 30px);
+        top: -10px;
+    }
+
+    40%{
+        left: calc(100% - 30px);
+        top: calc(100% - 10px);
+    }
+
+    60%{
+        left:-30px;
+        top: calc(100% - 10px);
+    }
+
+    80%{
+        left:-30px ;
+        top:-10px;
+    }
+
+    100%{
+        left:10%;
+    }
+}
+
+
+@keyframes rotate-bottom {
+    0%{
+        right:20%;
+        bottom:-10px;
+    }
+
+    20%{
+        right: calc(100% - 30px);
+        bottom: -10px;
+    }
+
+    40%{
+        right: calc(100% - 30px);
+        bottom: calc(100% - 10px);
+    }
+
+    60%{
+        right:-30px;
+        bottom: calc(100% - 10px);
+    }
+
+    80%{
+        right:-30px ;
+        bottom:-10px;
+    }
+
+    100%{
+        right:20%;
+    }
 }
