@@ -110,14 +110,14 @@
 /* Esercizio 9 */
 .ex-9-img {
     margin: 50px 100px;
-    transform: scale(2);
+    width: 400px;
     transition: all 5s;
 }
 
 .ex-9-img:hover{
     filter: sepia(.8);
     border-radius: 20px;
-    width: 600px;
+    transform: scale(2);
 }
 
 
