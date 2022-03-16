@@ -67,13 +67,11 @@
 }
 
 .ex-5-square:hover{
-    width: 100px;
-    height: 100px;
+    transform: scale(2);
 }
 
 .ex-5-square:active{
-    width: 10px;
-    height: 10px;
+    transform: scale(.5);
 }
 
 
@@ -112,7 +110,7 @@
 /* Esercizio 9 */
 .ex-9-img {
     margin: 50px 100px;
-    width: 400px;
+    transform: scale(2);
     transition: all 5s;
 }
 
